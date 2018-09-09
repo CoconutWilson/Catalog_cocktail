@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="refresh" content="600" />
+  <title>Fresh Cocktails - Mai Tai</title>
+
+  <!-- Bootstrap -->
+	<link href="../assets/stylesheet/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../assets/stylesheet/css/main.css" rel="stylesheet">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i|Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<div id="wrapper">
+  <body style="background-image: url('../assets/img/maitai/background_maitai.jpg');">
+    <div class="background">
+    	<div class="text_spe">
+    		<div class="title" style="font-family: 'titleFont_maitai';">Mai Tai</div>
+    		<p href="#discover" class="subtitle">We'd like to drink it on an island</p>
+    	</div>
+    	<div class="recipe"></div>
+  </div>
+  </body>
+
+  <header class="header">
+    <div class="logo container-fluid col-sm-8 col-md-10">Fresh Cocktails</div>
+    <div class="navbar col-sm-4 col-md-2">
+      <div class="dropdown" id="iconBloc">
+        <button class="menuButton">
+          <p id="menuIcon"><img src="../assets/img/cocktail.png" class="menuIcon"></img></p>
+        </button>
+        <div class="dropdown-content" id="les_h6">
+          <a href="#" id="maiTai">Mai Tai</a>
+          <a href="#" id="laPaloma">La Paloma</a>
+          <a href="#" id="cubaLibre">Cuba Libre</a>
+          <a href="#" id="cloverClub">Clover Club</a>
+          <a href="#" id="whiteRussian">White Russian</a>
+          <a href="#" id="cosmopolitan">Cosmopolitan</a>
+          <a href="#" id="pPatty">Peppermint Patty</a>
+          <a href="#" id="ginBasilSmash">Gin Basil Smash</a>
+          <a href="#" id="longIsland">Long Island</a>
+          <a href="#" id="moscowMule">Moscow Mule</a>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#les_h6").hide();
+        $("#menuIcon").mouseover(function () {
+            $("#les_h6").slideDown();
+            $("#les_h6").mouseleave(function(){ $("#les_h6").slideUp(); });
+            $("#iconBloc").mouseleave(function(){ $("#les_h6").slideUp(); });
+        });
+    });
+    </script>
+  </header>
+
+  <footer id="footer">
+  	<div class="social col-sm-2">
+  		<a href="#facebook"><i class="fab fa-facebook-f fa-2x socialIcons"></i></a>
+  		<a href="#linkedin"><i class="fab fa-linkedin-in fa-2x socialIcons"></i></a>
+  	</div>
+    <p class="footerText col-sm-8" id="footerText">Arnaud's label of quality is not recognised worldwide but will be soon</p>
+    <div class="col-sm-2"></div>
+  </footer>
+  <script type="text/javascript">
+      $(document).ready(function(){
+          $("#footerText").hide();
+          $("#footer").mouseover(function(){
+              $(this).css({ cursor: "pointer" });
+              $("#footerText").fadeIn();
+              $("#footer").mouseleave(function(){ $("#footerText").fadeOut(); });
+          });
+      });
+  </script>
+
+</div>
+
+</html>
